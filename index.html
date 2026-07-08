@@ -579,17 +579,20 @@ button.m-cta{font-family:inherit;cursor:pointer;}
 .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px 24px;}
 .fcol h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;font-weight:var(--fw-bold);color:#fff;margin:0 0 13px;}
 .fcol ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
-.fcol a,.fcol button{color:rgba(255,255,255,.74);text-decoration:none;font-size:14px;border:none;background:none;padding:0;font-family:inherit;cursor:pointer;text-align:left;transition:color var(--dur-fast);}
-.fcol a:hover,.fcol button:hover{color:#fff;text-decoration:underline;}
+.fcol a,.fcol button{position:relative;display:inline-block;color:rgba(255,255,255,.74);text-decoration:none;font-size:14px;border:none;background:none;padding:0;font-family:inherit;cursor:pointer;text-align:left;transition:color var(--dur-fast) var(--ease-soft),transform var(--dur-fast) var(--ease-soft);}
+.fcol a::before,.fcol button::before{content:"";position:absolute;left:-12px;top:50%;transform:translateY(-50%);width:3px;height:0;border-radius:2px;background:var(--green-lime);transition:height var(--dur-fast) var(--ease-soft);}
+.fcol a:hover,.fcol button:hover{color:#fff;transform:translateX(5px);}
+.fcol a:hover::before,.fcol button:hover::before{height:15px;}
 .fcol a:focus-visible,.fcol button:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:4px;}
 
 .footer-contact{position:relative;z-index:1;margin-top:38px;padding:24px 0;border-top:1px solid rgba(255,255,255,.16);
   display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;}
 .fc-items{display:flex;flex-wrap:wrap;gap:14px 28px;}
-.fc-item{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.85);}
-.fc-item svg{width:19px;height:19px;flex-shrink:0;color:#9FE1CB;}
-.fc-item a{color:#fff;text-decoration:none;}
-.fc-item a:hover{text-decoration:underline;}
+.fc-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:var(--fw-semibold);color:rgba(255,255,255,.92);}
+.fc-item svg{width:19px;height:19px;flex-shrink:0;color:#9FE1CB;transition:color var(--dur-fast) var(--ease-soft);}
+.fc-item a{color:#fff;text-decoration:none;display:inline-block;transition:color var(--dur-fast) var(--ease-soft),transform var(--dur-fast) var(--ease-soft);}
+.fc-item a:hover{color:#fff;transform:translateY(-1px);}
+.fc-item:hover svg{color:#fff;}
 .newsletter{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-pill);padding:5px 5px 5px 16px;}
 .newsletter input{border:none;background:transparent;outline:none;color:#fff;font-family:inherit;font-size:14px;line-height:1;width:170px;padding:10px 0;}
 .newsletter input::placeholder{color:rgba(255,255,255,.6);}
@@ -601,7 +604,7 @@ button.m-cta{font-family:inherit;cursor:pointer;}
   display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.68);}
 .legal-links{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;}
 .legal-links a,.legal-links button{color:rgba(255,255,255,.78);text-decoration:none;border:none;background:none;font-family:inherit;font-size:12.5px;cursor:pointer;padding:0;}
-.legal-links a:hover,.legal-links button:hover{color:#fff;text-decoration:underline;}
+.legal-links a:hover,.legal-links button:hover{color:#fff;}
 .legal-badges{display:flex;gap:18px;align-items:center;}
 .lbadge{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.25;color:rgba(255,255,255,.8);max-width:210px;}
 .lbadge .ehl,.lbadge .ncua{width:30px;height:30px;border:1.5px solid rgba(255,255,255,.65);border-radius:6px;display:grid;place-items:center;flex-shrink:0;color:#fff;}
@@ -855,7 +858,7 @@ button.m-cta{font-family:inherit;cursor:pointer;}
         <div class="fc-items">
           <span class="fc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.5a16 16 0 006 6l1.1-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg><a href="tel:8034328521">(803) 432-8521</a></span>
           <span class="fc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 7a2 2 0 010-2z"/></svg><a href="tel:8004335226">(800) 433-5226</a> <span style="opacity:.6">toll-free</span></span>
-          <span class="fc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:eservices@midcarolinacu.com">eservices@midcarolinacu.com</a></span>
+          <span class="fc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:eservices@midcarolinacu.com" aria-label="Email Mid Carolina Credit Union">Email Us</a></span>
           <span class="fc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.7-7-11a7 7 0 1114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a href="#">Locations &amp; Hours</a></span>
         </div>
         <form class="newsletter" onsubmit="return false">
