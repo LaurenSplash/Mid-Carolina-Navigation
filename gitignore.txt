@@ -8,3 +8,10 @@ Thumbs.db
 # Dependencies / build artifacts (not used by this prototype)
 node_modules/
 *.log
+
+# QA render artifacts (screenshots generated during review, not part of the site)
+d_*.png
+t_*.png
+full.png
+footer.png
+drawer*.png
