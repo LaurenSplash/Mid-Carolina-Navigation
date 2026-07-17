@@ -25,6 +25,10 @@ python3 -m http.server 8000
 - **Mobile:** scroll to the mobile section and tap the menu icon to open the drawer. The search bar stays pinned while the rest of the menu scrolls; member tasks sit in a 3-across quick-action grid.
 - **Routing number:** any "Routing Number" / "Routing #" control opens a copy-to-clipboard modal.
 
+## Developer handoff
+
+Technical and design notes (tokens, interaction model, accessibility, IA, component inventory) live in [`DEVELOPER-HANDOFF.md`](DEVELOPER-HANDOFF.md). They were removed from the prototype itself so `index.html` stays client-facing.
+
 ## Review changes (July 8, 2026)
 
 This build incorporates client review feedback from Savannah Bates, Kalynn Benoit, Shelley Lyles, and Phil Stewart:
@@ -47,6 +51,7 @@ This build incorporates client review feedback from Savannah Bates, Kalynn Benoi
 
 ```
 mccu-mega-nav/
-├── index.html    # the complete prototype
+├── index.html             # the complete, client-facing prototype
+├── DEVELOPER-HANDOFF.md   # design tokens, interaction/accessibility notes, IA, components
 └── README.md
 ```
